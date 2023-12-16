@@ -1,0 +1,74 @@
+<!-- 
+    Title: my-appointment.ejs
+    Date: 11/26/2023
+    Author: Phuong Tran
+    Description: Search Appointment Page
+    Sources: https://github.com/buwebdev/web-340/tree/master
+-->
+
+<!-- Header -->
+<%- include('./partials/_header.ejs') %>
+
+<!-- Search form  -->
+<section id="registration">
+  <div class="container">
+            <div class="form">
+                <h1>Search </h1>
+                <p><i class="italic-text">Type your email address to view your appointment</i></p>
+
+                    <label for="lastName">Email Address:</label>
+                    <input type="text" name="email" class="input" id="email">
+                    <br>
+                    <input type="submit" value="Search" id="search" class="btn-small">
+                    <br>
+
+            </div>
+        </div>
+    <div id="appointments"></div>
+</section>
+
+
+<script>
+    //Add onclick event to search button
+    document.getElementById("search").onclick = () => {
+      const email = document.getElementById("email").value
+      fetch(`/api/appointments/${email}`)
+        .then((res) => res.json())
+        .then((data) => {
+          let tableString = `
+                            <h3>Your Appointments</h3>
+                            <div class="form card-grid-1">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>First name</th>
+                                            <th>Last name</th>
+                                            <th>Email</th>
+                                            <th>Service</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`
+
+        for (let appointment of data) {
+                tableString +=  `
+                    <tr>
+                        <td>${appointment.firstName}</td>
+                        <td>${appointment.lastName}</td>
+                        <td>${appointment.email}</td>
+                        <td>${appointment.service}</td>
+                    </tr>
+                `;
+        }
+                tableString += `
+                                </tbody>
+                            </table>
+                        </div>
+                `
+                document.getElementById('appointments').innerHTML = tableString
+      });
+  };
+</script>
+
+
+<!-- Footer -->
+<%- include('./partials/_footer.ejs') %>

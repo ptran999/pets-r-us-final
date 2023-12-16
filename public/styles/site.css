@@ -1,0 +1,406 @@
+/* 
+    Title: site.ejs
+    Date: 11/24/2023
+    Author: Phuong Tran
+    Description: Styling of the website
+    Sources:
+        https://buwebdev-pets-r-us.onrender.com/styles/site.css 
+*/
+
+body {
+    font-family: Kaushan, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+/* Styling  for Navbar  */
+#main-nav {
+    background-color: #274653;
+    top: 0;
+    left: 0;
+    padding: 0 2rem; 
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    float: left;
+    list-style: none;
+  }
+  
+li a {
+    display: inline-block;
+    color: #e9c369;
+    background-color: transparent;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+li a:hover, .dropdown:hover {
+    color: #e9c369;
+  }
+  
+li.dropdown {
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.dropdown-content a:hover  {
+    color: #493c3c;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* styling for dropdown link */
+#main-nav .dropdown .drop-btn {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+  
+/* styling for nav brand */
+.nav-brand {
+    color: #e9c369;
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+
+/* Styling for cover image */
+#showcase {
+   top: 0;
+   left: 0;
+   min-height: calc(100vh - 60px);
+   background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../images/coverimage.PNG) no-repeat center center/cover;
+
+}
+
+.showcase-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+}
+
+/* button */
+.btn {
+    font-size: 20px;
+    padding: 20px 30px;
+    background-color: #e9c369;
+    border: none;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #274653;
+}
+
+.navbar ul li a {
+    text-decoration:  none;
+    color: #fff;
+}
+
+.navbar ul li a:hover, .btn a:hover {
+    color: #b6e7f7;
+}
+
+ .btn-small:hover {
+    list-style: none;
+    background-color: transparent;
+    border: 0.5px solid #fff;
+    transition: all 0.5s ease-in-out;
+    color: #b6e7f7;
+}
+
+.btn-small{
+    padding: 10px 20px;
+    background-color: #e9c369;
+    border: none;
+}
+
+/* location section  */
+#location-section, #testimonials, .grooming-section {
+    background-color: #fff;
+    padding-top: 20px; 
+}
+
+.location {
+    margin-top: 2%;
+    margin-bottom: 20px;
+    color: #274653;
+}
+
+#location-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    word-spacing: 1px ;  
+}
+
+.mission-text {
+    text-align: center;
+}
+
+h1 {
+    color: #71cb90;
+    font-size: 45px;
+    text-align: center;
+}
+
+h2 {
+    color: #71cb90;
+    text-align: center;
+}
+
+.grid, .row {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 18px;
+    grid-gap: 150px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+.form {
+    width: 100%;
+}
+
+.card-grid-1, .ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-local, .price-text {
+    text-align: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.ul {
+    list-style: none;
+    text-align: center;
+}
+
+.card-dog, .testimonial {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    width: 100%;
+    cursor: default;
+    color:#274653;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.card-dog:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pet-title {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.pet-content {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.pet-content p {
+    text-align: center;
+    margin-right: 10%;
+
+}
+
+/* Testimonials */
+#testimonials, #dog-trainer, #pet-boarding, #customer-list, #registration {
+    padding-bottom: 50px;
+    background-color: #4f4c49;
+    color: #fff;
+}
+
+.customers h1 {
+    color: #e9c369; 
+}
+
+.testimonial {
+    padding: 35px;
+    width: 90%;
+}
+
+.testimonial-text {
+    text-align: center;
+}
+
+.author {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* email section */
+#email-showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/footer-dog.jpg) center/cover no-repeat;
+    padding: 3rem 0;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+#email-showcase h3, #registration h3 {
+    font-size: 25px;
+    color: #71cb90;
+}
+
+#registration h3 {
+    font-size: 25px;
+    text-align: center;
+}
+
+#email-showcase input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+/* dog trainer  */
+.dog-trainer {
+    width: 700px;
+    height: auto;
+  }
+
+ /* training package price */
+  .training-price {
+    background-color: #fff;
+  }
+
+  .text-yellow {
+    color:#e9c369;
+  }
+
+  #pet-boarding {
+    padding-top: 30px;
+  }
+
+/* footer */ 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    top:0;
+    background-color: #274653;
+    padding: 20px 30px;
+    color: #fff;
+    
+}
+
+.column-right {
+    margin-left: 50%;
+}
+
+/* styling for form */
+.form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field label {
+    font-size: 18px;
+    
+}
+
+.input {
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: 350px;
+    background-color: #eee;
+}
+
+.italic-text {
+    font-weight: 100;
+    color: pink;
+}
+
+/* styling for table */
+.table {
+    border-collapse: collapse;
+    width: inherit;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #274653;
+    color: #fff;
+}
+
+.table td, th {
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    text-align: left;
+}
+
+.table-hover tr:hover {
+    background-color: #eee;
+    color: #274653;
+}
+

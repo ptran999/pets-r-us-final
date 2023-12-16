@@ -1,0 +1,29 @@
+{
+  "name": "pets-r-us",
+  "version": "1.0.0",
+  "description": "Pets-R-Us Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptran999/pets-r-us.git"
+  },
+  "author": "Phuong Tran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ptran999/pets-r-us/issues"
+  },
+  "homepage": "https://github.com/ptran999/pets-r-us#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

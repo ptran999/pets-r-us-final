@@ -1,0 +1,140 @@
+<!-- 
+    Title: index.ejs
+    Date: 11/26/2023
+    Author: Phuong Tran
+    Description: Landing Page
+    Sources:
+        https://github.com/buwebdev/web-340/tree/master
+-->
+
+<!-- Header  -->
+<%- include('./partials/_header.ejs') %>
+        
+<!-- Mission -->
+    <section id="location-section">
+        <div class="container">
+            <div class="location">
+                <h1>Our Mission</h1>
+                <p class="mission-text">Pets-R-Us began its first location in Bellevue, Nebraska, a few years ago to provide professional care and assistance for pets at home. 
+                We are carving out a new path beyond what traditional pet stores care to do. Pets-R-Us values your pets and understands how much they mean to you.
+                 We not only provide excellent services such as Pet sitting, dog walking, pet boarding, pet daycare, pet grooming, pet training, and transportation. 
+                </p>
+                <p class="mission-text">After a short period, Pet-R-Us quickly gained support from the local community.
+                  By thanking our beloved customers, we expand our business with one more location at Omaha, NE with more services and care to provide easy access for our dear customers.
+                   With every location, Pet-R-Us commit to fulfill the requirements of customers's needs in a pleasantly way.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section>
+    <div class="container ">
+        <div class="grid">
+        <div class="card-grid-1">
+            <div class="locations-info">
+                <h2>Bellevue</h2>
+                <p class="text-local">1000 Galvin Road S, Bellevue, NE 68005</p>
+                <ul class="ul">
+                    <li>Mon:   6:30 AM - 7:00 PM</li>
+                    <li>Tues:  6:30 AM - 7:00 PM</li>
+                    <li>Wed:   6:30 AM - 7:00 PM</li>
+                    <li>Thurs: 6:30 AM - 7:00 PM</li>
+                    <li>Fri:   6:30 AM - 7:00 PM</li>
+                    <li>Sat:   10:00 AM - 5:00 PM</li>
+                    <li>Sun:   10:00 AM - 5:00 PM</li>
+                </ul>
+            </div>
+            <br>
+            <div class="locations-info">
+                <h2>Omaha</h2>
+                <p class="text-local">2810 N 118th St,  Omaha, NE</p>
+                <ul class="ul">
+                    <li>Mon:   6:30 AM - 7:00 PM</li>
+                    <li>Tues:  6:30 AM - 7:00 PM</li>
+                    <li>Wed:   6:30 AM - 7:00 PM</li>
+                    <li>Thurs: 6:30 AM - 7:00 PM</li>
+                    <li>Fri:   6:30 AM - 7:00 PM</li>
+                    <li>Sat:   9:00 AM - 1:00 PM</li>
+                    <li>Sun:   11:00 AM - 5:00 PM</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card-grid-2">
+            <div class="dog card-dog">
+                <img src="../images/dog.jpg" class="img" alt="small dog"  />
+            <h3 class="pet-title">Pet of the Week</h3>
+            <div class="pet-content">
+                <p><span class="bold">Name:</span> Drew Carey</p>
+                <p><span class="bold">Age:</span> 1 year</p>
+                <p><span class="bold">Favorite Activity:</span> Playing with Toys</p>
+                <p><span class="bold">Foods:</span> All kind of foods</p>
+                <p><span class="bold">Things like to do:</span> Cuddling</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+    <div class="container ">
+      <div class="section-heading "><h1 class="customers">What Our Customers Say</h1></div>
+      <div class="testimonial ">
+        <div>
+          <p class="testimonial-text">It was a fantastic experience from the moment I walked through the door! Kelly always my favorite groomer. 
+            She greeted us and patiently answered all of our questions. 
+            The staff here are so friendly and seem genuinely happy to be in their jobs grooming our pets! 
+            Also, we couldn’t help noticing the fresh, clean smell of the salon!</p>
+            <div class="author">Tiffany Tran</div>
+        </div>
+       </div>
+  
+       <div class="testimonial ">
+        <div>
+          <p class="testimonial-text">I absolutely loved the service! Once I walked in everyone was so nice and very accommodating. 
+            My puppy didn't loose her mind and I was very pleased with the results. Prices seem to depend on the condition of the pets hair. 
+            It was not too far from my place, we will come back. </p>
+            <div class="author">John Doe</div>
+        </div>
+       </div>
+
+       <div class="testimonial ">
+        <div>
+          <p class="testimonial-text">My dog and I love this place. They are so nice to me from the very first time I walked in and didn't realize that we can have the services with or without appointments
+            They were able to take in my dog and gave her a nice polished grooming. The first time I took my dog she was nervous due to that she doesn't like water and cried when I left her.
+             Now I know she feels comfortable when I drop her off because she doesn't cry at all. 
+            She always comes home smelling so good and her hair cut just right. I'm so happy I found this place.</p>
+            <div class="author">David M. Smith</div>
+        </div>
+       </div>
+  </div>
+  </section>
+
+<!-- Email  -->
+<section id="email-showcase" >
+    <div class="">
+        <div class="container">
+            <div class="grid">
+            <div class="card-grid-1">
+                <h3 class="email-heading">Pets-R-Us</h3>
+                    <p>We commit to give your pets attention they deserve and provide personal care in the comfort of your own home!</p>
+            </div>
+
+            <div class="card-grid-2">
+                <h3>Email Newsletter</h3>
+                    <p>Subcribe to get new information for your loving pets! </p>
+                    <form action="">
+                        <input type="email" placeholder="Enter Email..">
+                        <input type="submit" value="Subscribe" class="btn-small">
+                    </form>
+            </div>
+           </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<%- include('./partials/_footer.ejs') %>

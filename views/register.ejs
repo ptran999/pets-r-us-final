@@ -1,0 +1,38 @@
+<!-- 
+    Title: register.ejs
+    Date: 11/26/2023
+    Author: Phuong Tran
+    Description: Register Page
+    Sources: https://github.com/buwebdev/web-340/tree/master
+-->
+
+<!-- Header -->
+<%- include('./partials/_header.ejs') %>
+
+<!-- Registration form  -->
+<section id="registration">
+  <div class="container">
+            <div class="form">
+                <h3 >Registration Form</h3>
+                <form action="/register" method="post">
+                    <label for="customerID">Customer ID</label>
+                    <br>
+                    <input type="text" name="customerID" class="input" id="customerID">
+                    <br>
+                
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" name="email" class="input" id="email">
+                    <br>
+                
+                    <br>
+                    <input type="submit" value="Sign up" class="btn-small">
+                    <br>
+
+                </form>
+            </div>
+        </div>
+</section>
+
+<!-- Footer -->
+<%- include('./partials/_footer.ejs') %>

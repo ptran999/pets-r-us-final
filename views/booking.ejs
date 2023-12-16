@@ -1,0 +1,57 @@
+<!-- 
+    Title: appointment.ejs
+    Date: 11/30/2023
+    Author: Phuong Tran
+    Description: Appointment Booking Page
+    Sources: https://github.com/buwebdev/web-340/tree/master
+-->
+
+<!-- Header section -->
+<%- include('./partials/_header.ejs') %>
+
+<!-- Registration form  -->
+<section id="registration">
+    <div class="container">
+              <div class="form">
+                  <h3 >Book Appointment</h3>
+                  <form action="/booking" method="post">
+                      <label for="userName">User Name</label>
+                      <br>
+                      <input type="text" name="userName" class="input" id="userName">
+                      <br>
+                  
+                      <label for="firstName">First Name</label>
+                      <br>
+                      <input type="text" name="firstName" class="input" id="firstName">
+                      <br>
+                  
+                      <label for="lastName">Last Name</label>
+                      <br>
+                      <input type="text" name="lastName" class="input" id="lastName">
+                      <br>
+
+                      <label for="email">Email</label>
+                      <br>
+                      <input type="text" name="email" class="input" id="email">
+                      <br>
+                
+                      <label for="service">Service:</label>
+                      <br>
+
+                      <select name="service" class="input" required>
+                        <% services.forEach(service => { %>
+                            <option value="<%= service.value %>"><%= service.text %></option>
+                        <% }); %>
+                    </select>
+                      <br>
+                      <br>
+
+                       <input type="submit" value="Book appointment" class="btn-small">
+                      <br>
+            </form>
+              </div>
+          </div>
+  </section>
+
+<!-- Footer -->
+<%- include('./partials/_footer.ejs') %>
